@@ -1,17 +1,17 @@
-# BOP Top 15 — Mobile Web Version
+# BOP Top 15 — NSE All-Equity Update
 
-This is a mobile-friendly Streamlit dashboard for the custom BOP research strategy.
+This update replaces manual stock entry with an NSE equity-universe selector.
 
-## Test on a computer
-pip install -r requirements.txt
-streamlit run app.py
+Options:
+- All NSE Equity (automatic)
+- NSE liquid scan (faster)
+- My 7 reference stocks
 
-## Publish online
-The project is deployment-ready for Streamlit Community Cloud or another Python web host.
-After deployment, the host supplies a public HTTPS URL that can be opened from Android/iPhone.
+The app retrieves the NSE equity security master and uses Yahoo Finance daily OHLCV data
+for research scoring. It ranks the scanned symbols and displays the Top 15.
 
-## Data
-The free mode uses Yahoo Finance daily data and is not a guaranteed real-time exchange feed.
-True live NSE streaming requires an appropriate broker/market-data API.
+Important: free Yahoo Finance data is not a guaranteed real-time NSE feed. Scanning a very
+large universe can be slow or rate-limited. Increase max symbols gradually.
 
-Never put Zerodha passwords, PINs, OTPs, API secrets, or access tokens in the source code.
+For true intraday/live scanning, replace the data layer with a licensed live market-data API
+(e.g. Zerodha Kite Connect) and do not put API secrets in the source code.
