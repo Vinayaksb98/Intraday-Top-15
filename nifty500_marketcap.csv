@@ -1,0 +1,5 @@
+symbol,market_cap_crore,index
+# Replace this template with the current NIFTY 500 constituent list and market caps.
+# Example rows:
+# RELIANCE,1500000,NIFTY 500
+# TCS,1300000,NIFTY 500
